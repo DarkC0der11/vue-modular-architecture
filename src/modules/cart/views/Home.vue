@@ -58,7 +58,8 @@ export default {
     },
 
     totalPrice() {
-      return this.items.reduce((acc, product) => acc + product.price, 0);
+      const price = this.items.reduce((acc, product) => acc + product.price, 0);
+      return price.toFixed(2);
     }
   }
 };
