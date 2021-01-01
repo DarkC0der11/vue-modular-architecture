@@ -1,11 +1,16 @@
 <template>
-  <div id="app">
-    <nav>
-      <a>
-        Online Store
-      </a>
-    </nav>
+  <v-app>
+    <v-app-bar app dense flat outlined>
+      <v-tabs>
+        <v-tab to="/products">Products</v-tab>
+        <v-tab to="/cart">Cart</v-tab>
+      </v-tabs>
+    </v-app-bar>
 
-    <router-view />
-  </div>
+    <v-main>
+      <v-container>
+        <router-view />
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
