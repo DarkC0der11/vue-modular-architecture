@@ -12,7 +12,7 @@ const moduleRoute = {
     },
 
     {
-      path: "show/:id",
+      path: ":id",
       component: Product
     }
   ]

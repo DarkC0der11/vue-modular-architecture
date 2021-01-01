@@ -2,7 +2,7 @@
   <div>
     <h1 class="mb-3">Products</h1>
 
-    <v-row v-if="isLoading" justify="center" no-gutters class="mb-12">
+    <v-row v-if="isLoading" justify="center" no-gutters class="my-12">
       <v-progress-circular indeterminate color="primary" size="64" />
     </v-row>
 
@@ -22,11 +22,15 @@
           <v-card-actions>
             <v-spacer />
 
+            <v-btn :to="`/products/${product.id}`" depressed>
+              View
+            </v-btn>
+
             <v-btn
               v-if="checkIsInCart(product)"
               class="white--text"
               color="red"
-              @click="$store.commit('cart/REMOVE_ITEM', item.id)"
+              @click="$store.commit('cart/REMOVE_ITEM', product.id)"
             >
               Remove from cart
             </v-btn>
